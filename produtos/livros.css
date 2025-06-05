@@ -1,0 +1,623 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*GERAL*/
+:root{
+    --cor-fundo:#180202;
+    --cor-fundoHeader:#180202;
+    --cor-fonte:#ffffff;
+    --cor-fonteNav:#ffffff;
+    --cor-fonteEspreitas: #ffffff;
+    --cor-titulos: #b81c1c;
+    --corEspreitas: #d1ce0b;
+    --sombraTextoEspreitas: #dfdd4cad;
+    --cor-hover:#830d0d;
+    --cor-dropdown: #310707;
+    --sombraTexto: #af0808;
+    --preto: #180202;
+    --corBorda: #5a1111;
+    --corpoTemp: rgb(0, 0, 0);
+    --link: #b11010;
+    --linkHover: #be6666;
+    --fundoFooter: #180505;
+    --fundoCopy: #130202;
+    --txtCopy: #810d0d;
+    --tituloFooter: #810b0b;
+    --footerBorda: #aa0a0a;
+    --footerFonte: #e09d9d;
+
+
+}
+
+.lightmode {
+    --cor-fundo:#ece19f;
+    --cor-fundoHeader: #a07210;
+    --cor-fonte:#000000;
+    --cor-titulos: #bb9b0c;
+    --cor-hover:#e7d803;
+    --cor-dropdown: #b48f13;
+    --preto: #a07210;
+    --sombraTexto: #ffd000;
+    --corBorda: #b89214;
+    --corpoTemp: rgb(0, 0, 0);
+    --link: #ac8d06;
+    --linkHover: #ffee00;
+    --sombraTexto: #cca90c;
+    --fundoFooter: #a07210;
+    --fundoCopy: #996518;
+    --txtCopy: #5a370a;
+    --tituloFooter: #864b07;
+    --footerBorda: #ffffff;
+    --footerFonte: #ffffff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*A BARRA DE NAVEGAÇÃO DE CIMA - 1*/
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-fundo) ;
+    color: var(--cor-fonte);
+}
+
+header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-fundoHeader);
+  box-shadow: 0 2px 16px var(--cor-fundoHeader);
+  z-index: 100;
+
+}
+
+.containerNav {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.nav {
+  height: 6rem;
+
+}
+
+.nav__logo,
+.nav__burger,
+.nav__close {
+  color: var(--cor-fonte);
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  margin-left: 1rem;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger,
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+  opacity: 0;
+}
+
+.nav__link {
+  color: var(--cor-fonteNav);
+  background-color: var(--cor-fundoHeader);
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+  font-size: 18px;
+}
+
+.nav__link:hover {
+  background-color: var(--cor-hover);
+}
+
+/*Mostrar menu - JS*/
+
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+.show-icon .nav__burger{
+  opacity:0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__close{
+  opacity:1;
+  transform: rotate(90deg);
+}
+
+/*Dropdown*/
+
+.dropdown__item {
+  cursor: pointer;
+}
+
+.dropdown__arrow {
+  font-family: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+
+.dropdown__link {
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  color: var(--cor-fonteNav);
+  background-color: var(--cor-dropdown);
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: 0.1rem;
+  font-size: 16px;
+}
+
+.dropdown__link:hover {
+  background-color: var(--cor-fundo);
+}
+
+.dropdown__menu { /*FAZ DESAPARECER NORMALMENTE*/
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+}
+
+.dropdown__item:hover .dropdown__menu { /*FAZ APARECER QUANDO PASSA O MOUSE*/
+  max-height: 1000px;
+  transition: max-height .4s ease-in
+}
+
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+button {
+  border: none;
+}
+
+#alterna-tema {
+  height: 50px;
+  width:50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--cor-dropdown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+}
+
+.tema {
+  margin-top: 3%;
+}
+
+.nav__list .tema {
+  display: flex;
+  justify-content: center;
+}
+
+#alterna-tema i {
+  color: var(--cor-fonteNav);
+  font-size: 20px;
+}
+
+#alterna-tema i:last-child {
+display: none;
+}
+
+.lightmode #alterna-tema i:first-child {
+display: none;
+}
+
+.lightmode #alterna-tema i:last-child {
+  display: block;
+}
+
+/*------CORPO-------*/
+
+.corpo1 {
+    margin-bottom: 5%;
+}
+
+.tituloMaior {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.livrosOficiais {
+    font-size: 32px;
+    color: var(--cor-fonte);
+    text-shadow: 0px 0px 20px var(--sombraTexto);
+}
+
+
+.tituloLRegras {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.livroRegras {
+    color: var(--cor-titulos);
+    text-shadow: 0px 0px 20px var(--sombraTexto);
+}
+
+.txtLRegras {
+    text-align: center;
+}
+
+.txtLRegras p {
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 2%;
+    font-size: 17px;
+    line-height: 1.8;
+    text-indent: 5%;
+    text-align: justify;
+}
+
+.txtLRegras a {
+    color: var(--link);
+}
+
+.txtLRegras a:hover {
+    color: var(--linkHover);
+}
+
+.imagens {
+   display: flex;
+   justify-content: center;
+   margin-top: 4%;
+   gap: 100px;
+}
+
+.imgLRegras img {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border: solid 8px, var(--corBorda);
+    border-radius: 50px;
+}
+
+.sobrevivendoAoHorror {
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.sobrevivendoAoHorror img {
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    border: solid 8px, var(--corBorda);
+    border-radius: 50px;
+}
+
+/*-------CORPO2 ESPREITAS-------*/
+
+.corpo2{
+    background-color: var(--corpoTemp);
+    overflow: hidden;
+}
+
+.containerEspreitador {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: auto;
+}
+
+.imagemEspreitador img {
+    max-width: 400px;
+    max-height: 800px;
+    width: 100%;
+    height: 100%;
+}
+
+.espreitasElementos {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.tituloEspreitas {
+  font-size: 2rem;
+  color: var(--corEspreitas);
+text-shadow: 0px 0px 20px var(--sombraTextoEspreitas);
+
+}
+
+.txtEspreitas p {
+  margin-right: 8rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-indent: 5%;
+  color: var(--cor-fonteEspreitas)
+}
+
+.imgLivroEspreitas{
+    display: flex;
+    justify-content: center;
+    margin-right: 10rem;
+}
+
+.imgLivroEspreitas img{
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    border: solid 8px, var(--corEspreitas);
+    border-radius: 50px;
+}
+
+.linkEspreitas {
+    color:var(--corEspreitas)
+}
+
+/*-------FOOTER--------*/
+
+footer {
+    padding: 30px 0;
+    background-color: var(--fundoFooter);
+}
+
+.containerFooter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;  
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: left;
+}
+.logoFooter {
+        border-right: 1.4px solid var(--footerBorda);
+        padding-right:6rem;
+    }
+
+.logoFooter img {
+    display: block;
+    padding: 10px;
+    margin: 0;
+}
+
+.contatosFooter h3 {
+    margin-bottom: 10px;
+    color: var(--tituloFooter);
+}
+
+.contatosFooter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contatosFooter li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.contatosFooter a {
+    text-decoration: none;
+    color: var(--footerFonte);
+    font-size: 15px;
+}
+
+.contatosFooter a i{
+    text-decoration: none;
+    color: var(--footerBorda);
+    font-size: 15px;
+    
+}
+
+.copyright {
+    margin-top: 1rem;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--fundoCopy);
+    font-size: 17px;
+    color: var(--txtCopy);
+}
+
+
+@media screen and (min-width:768px){
+.containerNav {
+  margin-inline: auto;
+}
+
+.nav {
+  height: calc(6rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+.nav__list {
+  height: 100%;
+  display: flex;
+  column-gap: 6rem;
+}
+
+.nav__link {
+  height: 100%;
+  padding: 0;
+  justify-content: initial;
+  column-gap: .25rem;
+}
+
+.nav__link:hover {
+  background-color: transparent;
+  color:var(--cor-hover)
+}
+
+.dropdown__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown__menu { /*FAZ DESAPARECER NORMALMENTE*/
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  background-color: var(--cor-dropdown);
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+}
+
+}
+
+
+@media screen and (max-width:768px){
+
+  /*---------NAVBAR----------*/
+
+  .nav__logo img {
+   width: 65px;
+   height: 65px;
+  }
+
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0; 
+    transition: top .4s, opacity .3s;
+  }
+
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .nav__list {
+    background-color: var(--preto);
+    padding-top: 1rem;
+  }
+
+  .show-menu {
+  opacity: 1;
+  pointer-events: auto;
+  top: 6rem;
+  }
+
+  .nav__list .tema{
+    padding: auto;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+
+  /*-----CONTEUDO-----*/
+
+  .imagens {
+    flex-direction: column;
+    padding: 30px
+  }
+
+  
+  .imagemEspreitador {
+    margin-top: 2.5rem;
+    width:150px;
+    height: auto;
+}
+
+
+.tituloEspreitas {
+  font-size: 20px;
+  color: var(--corEspreitas);
+}
+
+.txtEspreitas p {
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  line-height: 1.6;
+  text-indent: 5%;
+  font-size: 13px;
+}
+
+.imgLivroEspreitas{
+    display: flex;
+    justify-content: center;
+    margin-right: 0rem;
+}
+
+.imgLivroEspreitas img{
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    border: solid 6px, var(--corEspreitas);
+    border-radius: 40px;
+}
+
+ 
+}

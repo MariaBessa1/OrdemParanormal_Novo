@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem Paranormal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Google Icons Seta-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+     <!--CSS Carrossel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script> <!--Biblioteca Animações-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Biblioteca para simbolo-->
+   
+</head>
+<body>
+    <header class="header">
+        <nav class="nav containerNav">
+            <div class="nav__data">     
+                <a href="index.html" class="nav__logo">
+                    <img src="./imagens/logo.png" width="80" height="80">
+                </a>
+
+                 <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars nav__burger"></i> <!--Menu hamburguer-->
+                    <i class="fa-solid fa-xmark nav__close"></i> <!--X-->
+                 </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="#sobre" class="nav__link">Sobre</a>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <a class="nav__link" href="#temporadas">
+                           Temporadas <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                        </a>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="./temporadas/iniciacao.html" class="dropdown__link">Iniciação</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/osnf.html" class="dropdown__link">O Segredo na Floresta</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/desconjuracao.html" class="dropdown__link">Desconjuração</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/calamidade.html" class="dropdown__link">Calamidade</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/osni.html" class="dropdown__link">O Segredo na Ilha</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/sdol.html" class="dropdown__link">Sinais do Outro Lado</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/quarentena.html" class="dropdown__link">Quarentena</a>
+                            </li>
+
+                            <li>
+                                <a href="./temporadas/natalmacabro.html" class="dropdown__link">Natal Macabro</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                      <li class="dropdown__item">
+                        <a class="nav__link">
+                          Produtos Oficiais  <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                        </a>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="./produtos/livros.html" class="dropdown__link">Livros</a>
+                            </li>
+
+                            <li>
+                                <a href="./produtos/blusas.html" class="dropdown__link">Roupas</a>
+                            </li>
+
+                            <li>
+                                <a href="./produtos/hq.html" class="dropdown__link">Graphic Novels</a>
+                            </li>
+            
+            
+                        </ul>
+                    </li>
+
+                    
+                    <li>
+                        <a href="#Universo" class="nav__link">Universo</a>
+                    </li>
+
+                    <button class="tema" id="alterna-tema">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-ghost"></i>
+                    </button>
+                </ul>
+              
+            </div>
+        </nav>            
+      
+    </header>
+    <section class="corpo">
+        <div class="container-sobre">
+
+            <div class="imgsobre"> <!--imgSarah-->
+               <img src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img645112a1a00204.17067053.png?lastEdited=1683034790&w=1024&h=1024&f=webp" width="400" height="360">
+            </div>
+
+            <div class="txtsobre"> <!--txtSarah-->
+                <h1 id="sobre">土   Sobre</h1>
+                <p><span>O</span>rdem Paranormal é um universo ficcional escrito e dirigido pelo criador
+                    de conteúdo Rafael Lange 'Cellbit'. Voltado para o gênero de Investigação Paranormal,
+                    sua história é majoritariamente desenvolvida por meio de um RPG de mesa, o qual é
+                    transmitido aos sábados, às 18h. Assim como qualquer RPG, Ordem possui seu universo base 
+                    escrito pelo Mestre, podendo assim considerá-lo um narrador.
+                   <p> As ações e os acontecimentos importantes para o desenrolar da história são 
+                    realizados pelos jogadores, sendo estes também streamers e amigos do Cellbit. 
+                    Cada jogador possui seu personagem incluso no universo criado, o qual tem a missão
+                     de passar pelos desafios propostos pelo Mestre e sobreviver durante o processo.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+       <section class="corpo2">
+
+        <div class="box-titulo-temporadas">
+            <p class="titulo-temp" id="temporadas">Temporadas</p>
+        </div>
+
+        <!--CARROSSEL-->
+
+        <div class="container-carrossel swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/iniciacao.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/4Ud5QQ2IEgU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBaPwUi8ZmDuqD-aYPv5StS_9on0g" alt="card image" class="card-image">
+                            <p class="badge">Campanha Principal</p>
+                            <h2 class="card-title">Iniciação</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                         </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/osnf.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/23z-tCHgMGI/maxresdefault.jpg" alt="card image" class="card-image">
+                            <p class="badge">Campanha Principal</p>
+                            <h2 class="card-title">O Segredo Na Floresta</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                         </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/desconjuracao.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/b7PvLWZR6pg/maxresdefault.jpg" alt="card image" class="card-image">
+                            <p class="badge">Campanha Principal</p>
+                            <h2 class="card-title"> Desconjuração</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/calamidade.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/TRSlNehdWzs/maxresdefault.jpg" alt="card image" class="card-image">
+                            <p class="badge">Campanha Principal</p>
+                            <h2 class="card-title">Calamidade</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/osni.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/Pf4HzTdA2WE/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC9mr8-uEQsesS2jvmQm8BUixjmmQ" alt="card image" class="card-image">
+                            <p class="badge">Spin-Off</p>
+                            <h2 class="card-title">O Segredo na Ilha</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/sdol.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/kZPUmedtdf8/maxresdefault.jpg" alt="card image" class="card-image">
+                            <p class="badge">Spin-Off</p>
+                            <h2 class="card-title">Sinais do Outro Lado</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="./temporadas/quarentena.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/zCr9dKe-d2s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3L7tpCp8HF_laGJ3yxbPDpeMnxA" alt="card image" class="card-image">
+                            <p class="badge">Two-Shot Especial</p>
+                            <h2 class="card-title">Quarentena</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                     <li class="card-item swiper-slide">
+                        <a href="./temporadas/natalmacabro.html" class="card-link">
+                            <img src="https://i.ytimg.com/vi/YrEdL71DYpY/maxresdefault.jpg" alt="card image" class="card-image">
+                            <p class="badge">Especial de Natal</p>
+                            <h2 class="card-title">Natal Macabro</h2>
+                            <button class="card-button 
+                            material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+
+            </div>
+        </div>
+        <!--Script Carrossel-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    </section>
+      <section class="corpo3">
+
+        <div class="box-titulo-universo">
+            <p class="titulo-universo" id="Universo">Universo</p>
+        </div>
+
+              <div class="container-Universo">
+
+            <div class="imgUniverso">
+                <img id= "sangue" src="./imagens/Sangue.png"width="500" height="500">
+               <img id="conhecimento" src="./imagens/Conhecimento.png"width="500" height="500">
+            </div>
+
+            <div class="txtUniverso"> <!--txtSarah-->
+                <h2>"O PARANORMAL NÃO VEM PARA A NOSSA REALIDADE DE MANEIRA FACIL."</h2>
+                <p>Ou pelo menos, as coisas deveriam ser assim. O mundo que conhecemos é constituido
+                    de uma base de sanidade sólida, protegido pela Membrana, responsável por separar 
+                    nossa realidade do Outro Lado. Ela pode ser enfraquecida pelo Medo, fazendo com que 
+                    os chamados ocultistas busquem trazer criaturas para nossa realidade com base nesse
+                     conhecimento.
+                <p>Por causa disso, uma organização de detetives paranormais foi criada: a Ordo Realitas. 
+                    Seu objetivo é deter os ocultistas e acabar com o mal invocado, antes que ele impacte nosso mundo.
+                </p>
+            </div>
+        </div>
+    </section>
+   <footer>
+        <div class="containerFooter">
+          <div class="conteudo">
+              <div class="logoFooter">
+                  <a href="index.html">
+                      <img  height="120", width="120" src="./imagens/logo.png" class="logo">
+                  </a>
+              </div>
+              <div class="contatosFooter">
+                  <h3>Conheça!</h3>
+                  <ul>
+                      <li>
+                          <a href="https://ordemparanormal.com.br/"><i class="fa-solid fa-arrow-pointer"></i> ordemparanormal.com.br </a>
+                      </li>
+                      <li>
+                          <a href="https://www.instagram.com/ordemparanormal/"><i class="fa-brands fa-square-instagram"></i> @ordemparanormal </a>
+                      </li>
+                      <li>
+                          <a href="https://www.youtube.com/@OrdemParanormal"><i class="fa-brands fa-youtube"></i> Ordem Paranormal </a>
+
+                      </li>
+                  </ul>
+              </div>
+
+          </div> <!--Fim "conteudo"-->
+        </div> <!--Fim "containerFooter"-->
+
+        <div class="copyright">
+          <p>&copy; 2025 Meu Site Ordem. Todos os direitos reservados.</p>
+        </div> <!--Fim "copyright"-->
+
+
+  </footer>
+
+  <!--COOKIES-->
+
+  <div class="cookiesMensagem" id="cookiesMsg">
+    <div class="cookiesTexto">
+        <P> Este site utiliza de cookies para melhor funcionamento. Ao aceitar visualizá-lo, estará de acordo
+            com o uso desta tecnologia para lhe proporcionar uma melhor experiência. 
+        </P>
+    </div>
+    <div class="cookiesBotao">
+        <button onclick="aceitar()">Aceitar</button>
+    </div>
+  </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
